@@ -18,5 +18,5 @@
 
 - make init
 - source venv/bin/activate
-- python main.py
+- make run
 

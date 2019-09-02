@@ -6,7 +6,7 @@ init:
 	pip3 install -r requirements.txt; \
 
 run:
-	python manage.py -c ../config/local.py runserver
+	python main.py
 
 test:
 	py.test ./tests
@@ -16,14 +16,4 @@ update_deps:
 	source ./venv/bin/activate; \
 	pip3 install --upgrade -r requirements.txt; \
 
-fake:
-	python -m seed.seed
 
-revision:
-	python manage.py db revision --autogenerate;
-
-upgrade:
-	python manage.py db upgrade
-
-downgrade:
-	python manage.py db downgrade
