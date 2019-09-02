@@ -78,7 +78,7 @@ def fit_guest_into_appointment(guest, data):
                     if current_guest.status ==0:
                         data[choice][timeslot][spaces][s] = guest
                         output = "Booked {} for {} at {}".format(guest.full_name(), choice, timeslot)
-                        f= open("book.md","a+")
+                        f= open("output/book.md","a+")
                         f.write(output + "\n")
                         f.close()
                         print(output)
@@ -107,12 +107,12 @@ def main():
     name_maps = map_appointments()
     import os
     try:
-        os.remove("book.md")
+        os.remove("output/book.md")
     except:
         pass
         
     try:
-        os.remove("schedule.md")
+        os.remove("output/schedule.md")
     except:
         pass
 
@@ -167,7 +167,7 @@ def main():
         data = fit_guest_into_appointment(g, data) 
     print("booked {} guests for appointments".format(booked_counter))
     print("=========================================")
-    f= open("appointments.md","a+")
+    f= open("output/schedule.md","a+")
                         
                         
     for d in data:
