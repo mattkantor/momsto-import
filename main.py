@@ -117,7 +117,7 @@ def main():
         pass
 
     # get guest import
-    with open('data.csv', newline='\n') as csvfile:
+    with open('input/data.csv', newline='\n') as csvfile:
         moms = csv.reader(csvfile, delimiter=',', quotechar='|')
         next(moms, None) 
         for row in moms:
